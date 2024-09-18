@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clasificación de Radiografías</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+  <script src="https://unpkg.com/ml5@0.5.0/dist/ml5.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:500" /> <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+
+<body>
+  <section id="model">
+    <h1> Automatic diagnosis of chest pathologies </h1>
+
+    <div class="container">
+
+      <div class="input-button">
+        <input type="file" id="fileInput" accept="image/*" style="display:none;" onchange="modelReady(event)">
+        <img id="icon" src="./assets/upload.png" alt="icon">
+        <span id="customFileButton">Select images from your files</span>
+      </div>
+      
+      <div id="imageContainer">
+        <canvas id="canvas"  ></canvas>
+        <img id="output" style="display:none;"/>
+        <p id="result">Loading model...</p>
+        
+      </div>
+
+    </div>
+  </section>
+  <section id="about-me">
+    <h2>
+      Made by CrisScript<img id="icon" src="./assets/github-mark.svg" alt="icon"> <br>
+      <a href="https://github.com/CrisScript/Automatic-diagnosis-of-chest-pathologies.">Learn how I made it</a> 
+    </h2>
+  </section>
+  <script src="./js/model.js"></script>
+</body>
+</html>
